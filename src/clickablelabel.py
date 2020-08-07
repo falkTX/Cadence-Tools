@@ -19,12 +19,8 @@
 # ------------------------------------------------------------------------------------------------------------
 # Imports (Global)
 
-if True:
-    from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QTimer
-    from PyQt5.QtWidgets import QLabel
-else:
-    from PyQt4.QtCore import pyqtSignal, pyqtSlot, Qt, QTimer
-    from PyQt4.QtGui import QLabel
+from PyQt5.QtCore import pyqtSignal, pyqtSlot, Qt, QTimer
+from PyQt5.QtWidgets import QLabel
 
 # ------------------------------------------------------------------------------------------------------------
 # Widget Class

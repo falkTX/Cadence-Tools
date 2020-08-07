@@ -21,14 +21,9 @@
 
 from sys import platform, version_info
 
-if True:
-    from PyQt5.QtCore import pyqtSlot, Qt, QSettings, QTimer
-    from PyQt5.QtGui import QFontMetrics
-    from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QMessageBox
-else:
-    from PyQt4.QtCore import pyqtSlot, Qt, QSettings, QTimer
-    from PyQt4.QtGui import QFontMetrics
-    from PyQt4.QtGui import QDialog, QDialogButtonBox, QMessageBox
+from PyQt5.QtCore import pyqtSlot, Qt, QSettings, QTimer
+from PyQt5.QtGui import QFontMetrics
+from PyQt5.QtWidgets import QDialog, QDialogButtonBox, QMessageBox
 
 # ------------------------------------------------------------------------------------------------------------
 # Imports (Custom Stuff)
@@ -62,11 +57,7 @@ JACK_TIMER_HPET          = 2
 
 if "linux" in platform:
     LINUX = True
-
-    if version_info >= (3, 0):
-        from subprocess import getoutput
-    else:
-        from commands import getoutput
+    from subprocess import getoutput
 else:
     LINUX = False
 
@@ -196,7 +187,7 @@ class JackSettingsW(QDialog):
         global gJackctl
 
         if gJackctl is None:
-            QTimer.singleShot(0, self, SLOT("slot_closeWithError()"))
+            QTimer.singleShot(0, self.slot_closeWithError)
             return
 
         # -------------------------------------------------------------
@@ -927,7 +918,6 @@ class JackSettingsW(QDialog):
 
 if __name__ == '__main__':
     # Additional imports
-    import resources_rc
     from sys import argv as sys_argv, exit as sys_exit
     from PyQt5.QtGui import QIcon
     from PyQt5.QtWidgets import QApplication
