@@ -11,10 +11,6 @@ They can be re-used in other projects. Contact the author if you need help on th
 ## The tools
 Here's a brief description of the included tools:
 
-### [Cadence-JackMeter](http://kxstudio.sourceforge.net/KXStudio:Applications:Cadence-JackMeter)
-Digital peak meter for JACK. <br/>
-It automatically connects itself to all application JACK output ports that are also connected to the system output.
-
 ### [Cadence-JackSettings](http://kxstudio.sourceforge.net/KXStudio:Applications:Cadence-JackSettings)
 Simple and easy-to-use configure dialog for jackdbus. <br/>
 It can configure JACK's driver and engine parameters.
@@ -26,6 +22,13 @@ The logs are viewed in a text box, making it easy to browse and extract status m
 ### [Cadence-Render](http://kxstudio.sourceforge.net/KXStudio:Applications:Cadence-Render)
 Tool to record (or 'render') a JACK project using jack-capture, controlled by JACK Transport. <br/>
 It supports a vast number of file types and can render in both realtime and freewheel modes.
+
+## Legacy tools (now part of Carla)
+Here's a brief description of the included tools:
+
+### [Cadence-JackMeter](http://kxstudio.sourceforge.net/KXStudio:Applications:Cadence-JackMeter)
+Digital peak meter for JACK. <br/>
+It automatically connects itself to all application JACK output ports that are also connected to the system output.
 
 ### [Cadence-XY Controller](http://kxstudio.sourceforge.net/KXStudio:Applications:Cadence-XYController)
 Simple XY widget that sends and receives data from Jack MIDI. <br/>
